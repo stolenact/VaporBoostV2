@@ -1,0 +1,33 @@
+{
+    "name": "vaporbooster",
+    "version": "2.0.0",
+    "description": "Advanced Steam Hour Booster with 2FA support, statistics, game database, and more.",
+    "main": "src/accountHandler.js",
+    "scripts": {
+        "start": "node src/accountHandler.js",
+        "dev": "node --watch src/accountHandler.js",
+        "setup": "node src/setup.js",
+        "stats": "node src/statsViewer.js",
+        "clean": "rm -rf accounts_data messages logs/*.log"
+    },
+    "keywords": [
+        "steam",
+        "booster",
+        "hours",
+        "gaming",
+        "automation"
+    ],
+    "license": "MIT",
+    "author": "VaporBooster",
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "dependencies": {
+        "easytimer.js": "^4.5.4",
+        "jwt-decode": "^3.1.2",
+        "readline-sync": "^1.4.10",
+        "steam-totp": "^2.1.2",
+        "steam-user": "^4.28.8"
+    },
+    "devDependencies": {}
+}

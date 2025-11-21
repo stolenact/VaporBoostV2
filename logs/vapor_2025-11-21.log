@@ -1,0 +1,67 @@
+[23:39:56] [SUCCESS] Created directory: accounts_data
+[23:40:15] [SUCCESS] Goodbye! 👋
+[23:40:23] [INFO] Let's set up your first account!
+
+[23:40:54] [SUCCESS] Account saved successfully!
+[23:41:36] [ERROR] Failed to load settings: Unexpected end of JSON input
+[23:41:44] [SUCCESS] Settings saved!
+[23:41:53] [WARN] Invalid option
+[23:41:53] [WARN] Invalid option
+[23:41:54] [WARN] Invalid option
+[23:41:56] [SUCCESS] Goodbye! 👋
+[23:43:24] [WARN] No games found
+[23:44:21] [WARN] Game ID 6767 not in database
+[23:44:21] [INFO] You can still use this ID - it may be valid on Steam
+[23:46:06] [SUCCESS] Account updated successfully!
+[23:46:10] [SUCCESS] Account updated successfully!
+[23:46:16] [INFO] Cancelled
+[23:46:18] [ERROR] Username cannot be empty
+[23:46:23] [SUCCESS] Account removed successfully!
+[23:46:28] [SUCCESS] Account removed successfully!
+[23:47:08] [SUCCESS] Account "kvzthek1ngv3" added successfully!
+[23:47:25] [SUCCESS] Account updated successfully!
+[23:47:29] [SUCCESS] Account removed successfully!
+[23:47:39] [INFO] Let's set up your first account!
+
+[23:47:45] [SUCCESS] Account saved successfully!
+[23:47:46] [WARN] Invalid option
+[23:47:54] [INFO] Cancelled
+[23:47:59] [SUCCESS] Account removed successfully!
+[23:48:53] [INFO] [reformedzta] Connecting...
+[23:48:54] [WARN] [reformedzta] Steam Guard required (Mobile App)
+[23:49:22] [SUCCESS] [reformedzta] Logged in successfully!
+[23:49:22] [INFO] [reformedzta] Boosting 1 games
+[23:50:27] [INFO] Starting 1 accounts...
+[23:50:27] [INFO] [reformedzta] Connecting...
+[23:50:28] [WARN] [reformedzta] Steam Guard required (Mobile App)
+[23:50:47] [SUCCESS] [reformedzta] Logged in successfully!
+[23:50:47] [INFO] [reformedzta] Boosting 1 games
+[23:50:47] [ERROR] [reformedzta] Error: LogonSessionReplaced
+[23:50:47] [ERROR] [reformedzta] LogonSessionReplaced
+[23:54:05] [INFO] Starting 1 accounts...
+[23:54:05] [INFO] [reformedzta] Connecting...
+[23:54:08] [WARN] [reformedzta] Steam Guard required (Mobile App)
+[23:54:13] [WARN] [reformedzta] Steam Guard required (Mobile App)
+[23:54:44] [WARN] [reformedzta] Steam Guard required (Mobile App)
+[23:54:50] [WARN] [reformedzta] Steam Guard required (Mobile App)
+[23:57:17] [INFO] Let's set up your first account!
+
+[23:57:31] [SUCCESS] Account saved successfully!
+[23:58:52] [INFO] Let's set up your first account!
+
+[23:59:16] [SUCCESS] Account saved successfully!
+[00:01:24] [SUCCESS] Account updated successfully!
+[00:01:35] [INFO] [reformedzta] Connecting...
+[00:01:37] [WARN] [reformedzta] Steam Guard required (Mobile App)
+[00:01:51] [SUCCESS] [reformedzta] Logged in successfully!
+[00:01:51] [INFO] [reformedzta] Boosting 8 games
+[00:02:10] [INFO] Starting 1 accounts...
+[00:02:10] [INFO] [reformedzta] Connecting...
+[00:02:12] [WARN] [reformedzta] Steam Guard required (Mobile App)
+[00:03:06] [ERROR] [reformedzta] Error: RateLimitExceeded
+[00:03:06] [ERROR] [reformedzta] Rate Limited - Wait a few minutes
+[00:33:23] [INFO] Starting 1 accounts...
+[00:33:23] [INFO] [reformedzta] Connecting...
+[00:33:24] [WARN] [reformedzta] Steam Guard required (Mobile App)
+[00:33:47] [SUCCESS] [reformedzta] Logged in successfully!
+[00:33:47] [INFO] [reformedzta] Boosting 8 games

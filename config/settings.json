@@ -1,0 +1,9 @@
+{
+  "autoReconnect": true,
+  "debug": true,
+  "logToFile": true,
+  "startupDelay": 2000,
+  "maxReconnectAttempts": 5,
+  "reconnectDelay": 30000,
+  "showNotifications": true
+}
