@@ -57,8 +57,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/vaporbooster.git
-cd vaporbooster
+git clone https://github.com/stolenact/vaporboosterv2.git
+cd vaporboosterv2
 
 # Install dependencies
 npm install
