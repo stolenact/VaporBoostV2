@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "vaporbooster",
     "version": "2.0.0",
     "description": "Advanced Steam Hour Booster with 2FA support, statistics, game database, and more.",
@@ -31,3 +32,48 @@
     },
     "devDependencies": {}
 }
+=======
+  "name": "vaporbooster",
+  "version": "3.0.0",
+  "description": "Advanced Steam Hour Booster with 2FA, invisible mode, QR login, and PM2 support",
+  "main": "src/accountHandler.js",
+  "scripts": {
+    "start": "node src/accountHandler.js",
+    "dev": "node --watch src/accountHandler.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop vaporbooster",
+    "pm2:restart": "pm2 restart vaporbooster",
+    "pm2:logs": "pm2 logs vaporbooster",
+    "clean": "rm -rf accounts_data messages logs/*.log"
+  },
+  "keywords": [
+    "steam",
+    "booster",
+    "hours",
+    "gaming",
+    "idle",
+    "cards"
+  ],
+  "author": "stolenact",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "easytimer.js": "^4.5.4",
+    "readline-sync": "^1.4.10",
+    "steam-totp": "^2.1.2",
+    "steam-user": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stolenact/vaporbooster"
+  },
+  "bugs": {
+    "url": "https://github.com/stolenact/vaporbooster/issues"
+  }
+}
+>>>>>>> 894d41f (Updated V3 pre-release)

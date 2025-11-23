@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # node
 node_modules/
 
@@ -25,3 +26,48 @@ thumbs.db
 
 # VSCode
 .vscode/
+=======
+# Dependencies
+node_modules/
+
+# Sensitive data - NEVER COMMIT
+config/accounts.json
+config/settings.json
+
+# Session data
+accounts_data/
+
+# Logs
+logs/
+*.log
+
+# Messages
+messages/
+
+# PM2
+.pm2/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+build/
+
+# Misc
+*.tgz
+*.bak
+*.tmp
+>>>>>>> 894d41f (Updated V3 pre-release)
