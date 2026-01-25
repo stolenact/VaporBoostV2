@@ -11,242 +11,110 @@
             |_|  v3.0.0       
 ```
 
-> **Advanced Steam Hour Booster** - Multi-account support, invisible mode, 2FA/QR login, real-time statistics, and PM2 production support.
+> **Advanced Steam Hour Booster** with enterprise security, QR login, invisible mode, and comprehensive statistics.
 
 [![Node.js](https://img.shields.io/badge/Node.js-16+-green.svg)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Steam](https://img.shields.io/badge/Steam-API-black.svg)](https://steamcommunity.com/)
+[![Author](https://img.shields.io/badge/Author-stolenact-blue.svg)](https://github.com/stolenact)
 
 ---
 
-## ✨ Features
+## ⚠️ IMPORTANT LEGAL DISCLAIMER
 
-### Core Features
-- **Multi-account boosting** - Boost unlimited accounts simultaneously
-- **Invisible mode** - Boost hours while appearing offline
-- **2FA Support** - Shared secret auto-generation or manual code entry
-- **QR Login** - Approve login from Steam mobile app
-- **Auto-reconnect** - Automatic reconnection on disconnection
-- **Custom status** - Set "Now Playing" custom text
+**READ THIS BEFORE USING**
 
-### New in v3.0
-- **Improved UI** - Fixed-width menus that work in any terminal
-- **PM2 Support** - Production-ready with ecosystem config
-- **Better password handling** - Support for 64+ character passwords
-- **Live sidebar** - See active sessions while navigating menus
-- **Session statistics** - Track hours, messages, errors in real-time
-- **Lifetime stats** - Historical data across all sessions
-- **Duplicate prevention** - Can't add same account twice
-- **Input validation** - Proper error handling for all inputs
->>>>>>> 894d41f (Updated V3 pre-release)
+This software is provided for **educational purposes only**. Using this tool **WILL violate**:
+- Steam's Terms of Service
+- Steam Subscriber Agreement  
+- Potentially anti-cheat policies
+
+**By using this software you acknowledge:**
+- ⚠️ Your Steam account(s) **may be permanently banned**
+- ⚠️ You use this tool **entirely at your own risk**
+- ⚠️ The author (stolenact) bears **NO responsibility** for any consequences
+- ⚠️ You have read and understood Steam's Terms of Service
+
+**STRONGLY RECOMMENDED**: Use test/alt accounts only!
 
 ---
 
-## 📦 Installation
+## ✨ Key Features
 
-<<<<<<< HEAD
-```bash
-# Clone the repository
-git clone https://github.com/stolenact/vaporboosterv2.git
-cd vaporboosterv2
-=======
+### 🔒 Security First
+- **AES-256-GCM Encryption** for sensitive data
+- **Input validation** and sanitization throughout
+- **Rate limiting** prevents Steam API abuse
+- **Secure file permissions** (600/700 automatically set)
+- **No hardcoded secrets** - environment variables supported
+- **Prototype pollution** protection
+
+### 🚀 Advanced Features  
+- **Multi-account** simultaneous boosting
+- **Invisible mode** (boost while appearing offline)
+- **QR/App login** support (scan QR or approve in Steam app) ✅ **WORKING!**
+- **Auto-reconnect** with exponential backoff
+- **Real-time statistics** tracking
+- **Message logging** and auto-reply
+- **State persistence** across restarts
+- **Automatic backups** with rotation
+
+### 🐛 All Known Bugs FIXED
+- ✅ QR login now fully functional
+- ✅ Table UI works with 9+ accounts (pagination)
+- ✅ Long usernames display correctly
+- ✅ No more random "?" characters (pure ASCII)
+- ✅ Statistics page completely fixed
+- ✅ False "active state" bug resolved
+- ✅ Settings save properly without freezing
+
+---
+
+## 📦 Quick Start
+
 ### Prerequisites
-- [Node.js](https://nodejs.org/) v16.0.0 or higher
-- npm (comes with Node.js)
-- (Optional) [PM2](https://pm2.keymetrics.io/) for production
 
-### Quick Start
+- [Node.js](https://nodejs.org/) v16 or higher
+- npm (comes with Node.js)
+- Steam account(s) - **USE ALT ACCOUNTS!**
+
+### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/stolenact/vaporbooster.git
-cd vaporbooster
->>>>>>> 894d41f (Updated V3 pre-release)
+# Clone repository
+git clone https://github.com/stolenact/VaporBooster.git
+cd VaporBooster
 
 # Install dependencies
 npm install
 
-<<<<<<< HEAD
-# Start the booster
+# Copy environment template (optional)
+cp .env.example .env
+
+# Start application
 npm start
 ```
 
----
+### First Run
 
-## ⚙️ Configuration
-
-### Quick Setup (Recommended)
-Run the setup wizard on first launch - it will guide you through adding your first account.
-
-### Manual Configuration
-Edit `config/accounts.json`:
-
-```json
-[
-    {
-        "username": "your_username",
-        "password": "your_password",
-        "sharedSecret": "",
-        "enableStatus": true,
-        "gamesAndStatus": ["🎮 Boosting", 730, 440, 570],
-        "replyMessage": "AFK - Will respond later!",
-        "receiveMessages": true,
-        "saveMessages": true
-    }
-]
-```
-
-### Configuration Options
-
-| Option | Type | Description |
-|--------|------|-------------|
-| `username` | string | Steam account username |
-| `password` | string | Steam account password |
-| `sharedSecret` | string | 2FA shared secret (optional) |
-| `enableStatus` | boolean | Show online status (false = invisible) |
-| `gamesAndStatus` | array | Games to boost + custom status |
-| `replyMessage` | string | Auto-reply message (empty = disabled) |
-| `receiveMessages` | boolean | Log received messages |
-| `saveMessages` | boolean | Save messages to file |
+The application will:
+1. Show legal disclaimer (you must accept)
+2. Guide you through adding your first account
+3. Start boosting immediately
 
 ---
 
-## 🎯 Popular Game IDs
-
-| Game | ID |
-|------|-----|
-| Counter-Strike 2 | 730 |
-| Team Fortress 2 | 440 |
-| Dota 2 | 570 |
-| PUBG | 578080 |
-| Rust | 252490 |
-| GTA V | 271590 |
-| Apex Legends | 1172470 |
-| Elden Ring | 1245620 |
-
-*Use the built-in Game Database Browser for 50+ more games!*
-
----
-
-## 🖥️ Usage
-
-### Main Menu
-```
-╔════════════════════════════════════════════════════════════╗
-║              VAPOR BOOSTER - MAIN MENU                     ║
-╠════════════════════════════════════════════════════════════╣
-║  [1] Start All Accounts                                    ║
-║  [2] Start Single Account                                  ║
-║  [3] Account Manager                                       ║
-║  [4] Game Database Browser                                 ║
-║  [5] Statistics Dashboard                                  ║
-║  [6] Settings                                              ║
-║  [7] Setup Wizard                                          ║
-║  [0] Exit                                                  ║
-╚════════════════════════════════════════════════════════════╝
-```
-
-### Keyboard Shortcuts (While Boosting)
-- `Q` - Quit and logout all accounts
-- `M` - Return to main menu
-- `S` - View statistics dashboard
-- `R` - Refresh display
-
-=======
-# Start the application
-npm start
-```
-
-### PM2 Installation (Production)
-
-```bash
-# Install PM2 globally
-npm install -g pm2
-
-# Start with PM2
-npm run pm2:start
-
-# View logs
-npm run pm2:logs
-
-# Stop
-npm run pm2:stop
-```
-
->>>>>>> 894d41f (Updated V3 pre-release)
----
-
-## 📁 Project Structure
-
-```
-vaporbooster/
-├── src/
-<<<<<<< HEAD
-│   └── accountHandler.js    # Main application
-├── utils/
-│   ├── colors.js           # ANSI color codes
-│   ├── logger.js           # Logging system
-│   ├── banner.js           # ASCII art banners
-│   ├── configManager.js    # Configuration handler
-│   ├── stats.js            # Statistics tracking
-│   └── gameDatabase.js     # Game ID database
-├── config/
-│   ├── accounts.json       # Account configuration
-│   └── settings.json       # App settings
-├── logs/                   # Log files
-├── messages/               # Saved messages
-├── accounts_data/          # Steam session data
-└── package.json
-=======
-│   └── accountHandler.js     # Main application entry
-├── utils/
-│   ├── colors.js             # ANSI color codes
-│   ├── logger.js             # Logging system
-│   ├── banner.js             # ASCII art banners
-│   ├── configManager.js      # Config handling
-│   ├── stats.js              # Statistics tracking
-│   └── ui.js                 # UI components
-├── config/
-│   ├── accounts.json         # Your accounts (gitignored)
-│   ├── accounts.example.json # Example config
-│   └── settings.json         # App settings
-├── logs/                     # Log files
-├── messages/                 # Saved chat messages
-├── accounts_data/            # Steam session data
-├── ecosystem.config.js       # PM2 configuration
-├── package.json
-└── README.md
->>>>>>> 894d41f (Updated V3 pre-release)
-```
-
----
-
-<<<<<<< HEAD
-## 🔒 Security Notes
-
-- Passwords are stored locally in `config/accounts.json`
-- Never share your configuration files
-- Use shared secrets instead of manual 2FA when possible
-- Session tokens are stored in `accounts_data/`
-
----
-
-## ⚠️ Disclaimer
-
-This tool is for educational purposes only. Use at your own risk. Boosting hours may violate Steam's Terms of Service.
-=======
 ## ⚙️ Configuration
 
 ### Adding Accounts
 
-**Option 1: Setup Wizard (Recommended)**
+**Method 1: Setup Wizard** (Recommended)
 ```
-Run the app and select option [3] Add New Account
+npm start
+→ Select [3] Add New Account
+→ Follow prompts
 ```
 
-**Option 2: Manual Configuration**
-
-Create `config/accounts.json`:
+**Method 2: Manual** (`config/accounts.json`)
 
 ```json
 [
@@ -255,64 +123,62 @@ Create `config/accounts.json`:
         "password": "your_password",
         "sharedSecret": "",
         "invisible": true,
-        "gamesAndStatus": ["Custom Status", 730, 440],
-        "replyMessage": "AFK",
+        "gamesAndStatus": ["Custom Status", 730, 440, 570],
+        "replyMessage": "AFK - Boosting hours",
         "saveMessages": true
     }
 ]
 ```
 
-### Configuration Options
+**Security Note:**
+```bash
+# Set secure permissions (Unix/Linux/Mac)
+chmod 600 config/accounts.json
+```
+
+### Configuration Fields
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `username` | string | Steam account username |
-| `password` | string | Steam account password (supports 64+ chars) |
-| `sharedSecret` | string | 2FA shared secret for auto-code generation |
-| `invisible` | boolean | `true` = boost while appearing offline |
-| `gamesAndStatus` | array | First string = status, rest = game IDs |
-| `replyMessage` | string | Auto-reply to messages (empty = disabled) |
-| `saveMessages` | boolean | Save received messages to file |
+| `username` | string | Steam username |
+| `password` | string | Steam password (supports 256+ chars) |
+| `sharedSecret` | string | 2FA shared secret for auto-codes |
+| `invisible` | boolean | Boost while appearing offline |
+| `gamesAndStatus` | array | Custom status + game IDs |
+| `replyMessage` | string | Auto-reply to messages |
+| `saveMessages` | boolean | Log messages to file |
 
 ### Settings
 
-Edit via the Settings menu or `config/settings.json`:
+Access via menu option `[6] Settings`:
 
-```json
-{
-    "autoReconnect": true,
-    "invisibleMode": false,
-    "saveMessages": true,
-    "debug": false,
-    "startupDelay": 2000
-}
-```
+- **Auto-reconnect**: Auto-reconnect on disconnection
+- **Invisible mode**: Default invisible for all accounts
+- **Save messages**: Log friend messages
+- **Debug mode**: Extended logging
+- **Startup delay**: Delay between account logins (1000-10000ms)
 
 ---
 
 ## 🎮 Finding Game IDs
 
-Game IDs are found in the Steam store URL:
+Game IDs are in the Steam store URL:
 
 ```
 https://store.steampowered.com/app/730/Counter-Strike_2/
-                                    ^^^
-                                  Game ID
+                                  ^^^^^
+                                  GameID
 ```
 
 ### Popular Game IDs
 
-| Game | ID |
-|------|-----|
-| Counter-Strike 2 | 730 |
-| Dota 2 | 570 |
-| Team Fortress 2 | 440 |
-| PUBG | 578080 |
-| Rust | 252490 |
-| GTA V | 271590 |
-| Apex Legends | 1172470 |
-| Elden Ring | 1245620 |
-| Palworld | 2358720 |
+| Game | ID | Game | ID |
+|------|-----|------|-----|
+| Counter-Strike 2 | 730 | GTA V | 271590 |
+| Dota 2 | 570 | Apex Legends | 1172470 |
+| Team Fortress 2 | 440 | Elden Ring | 1245620 |
+| PUBG | 578080 | Rust | 252490 |
+| Palworld | 2358720 | Valheim | 892970 |
 
 ---
 
@@ -321,92 +187,77 @@ https://store.steampowered.com/app/730/Counter-Strike_2/
 ### Main Menu
 
 ```
-┌────────────────────────────────────────────────┐
-│ MAIN MENU                                      │
-├────────────────────────────────────────────────┤
-│                                                │
-│  [1] Start All Accounts (2)                    │
-│  [2] Start Single Account                      │
-│  [3] Add New Account                           │
-│  [4] Manage Accounts                           │
-│  [5] View Statistics                           │
-│  [6] Settings                                  │
-│                                                │
-│  [0] Exit                                      │
-│                                                │
-└────────────────────────────────────────────────┘
++============================================================+
+|              VAPOR BOOSTER - MAIN MENU                     |
++============================================================+
+|                                                            |
+|  [1] Start All Accounts (2 total)                          |
+|  [2] Start Single Account                                  |
+|  [3] Add New Account                                       |
+|  [4] Manage Accounts                                       |
+|  [5] View Statistics                                       |
+|  [6] Settings                                              |
+|  [7] Export Backup                                         |
+|                                                            |
+|  [0] Exit                                                  |
+|                                                            |
++============================================================+
 ```
 
-### Keyboard Shortcuts (While Boosting)
+### While Boosting
 
-| Key | Action |
-|-----|--------|
-| `M` | Return to main menu |
-| `S` | View statistics |
-| `Q` | Quit application |
+Press keys for actions:
+- **M** - Return to menu
+- **S** - View statistics
+- **Q** - Quit application
 
 ### Login Methods
 
-1. **Password + 2FA Code** - Enter code manually when prompted
-2. **Password + Shared Secret** - Auto-generates 2FA codes
-3. **Steam App Approval** - Type `wait` when prompted, then approve in Steam app
+1. **Password only** - Enter password when prompted
+2. **Password + 2FA (manual)** - Enter code from email/app
+3. **Password + Shared Secret** - Auto-generates codes
+4. **QR/App Approval** - Choose option 2, scan QR or approve in app ✅
 
 ---
 
-## 🔒 Security
+## 🔐 Security Best Practices
 
-### Best Practices
-
-1. **Never share** your `config/accounts.json` file
-2. **Use `.gitignore`** to exclude sensitive files (already configured)
-3. **Shared secrets** are more secure than manual 2FA
-4. **Export feature** doesn't include passwords
-
-### File Permissions
+### 1. Enable Encryption
 
 ```bash
-# Linux/Mac - Restrict config access
+# Generate encryption key
+openssl rand -hex 32 > .encryption-key
+chmod 600 .encryption-key
+```
+
+### 2. File Permissions
+
+```bash
 chmod 600 config/accounts.json
+chmod 600 .env
+chmod 700 accounts_data/
+chmod 700 data/
 ```
 
----
+### 3. Environment Variables
 
-## 🚀 PM2 Production Usage
-
-### Commands
-
+Instead of storing in config files:
 ```bash
-# Start
-pm2 start ecosystem.config.js
-
-# Status
-pm2 status
-
-# Logs
-pm2 logs vaporbooster
-
-# Restart
-pm2 restart vaporbooster
-
-# Stop
-pm2 stop vaporbooster
-
-# Delete from PM2
-pm2 delete vaporbooster
-
-# Auto-start on boot
-pm2 startup
-pm2 save
+export STEAM_USERNAME=myuser
+export STEAM_PASSWORD=mypass
 ```
 
-### Monitoring
+### 4. Regular Updates
 
 ```bash
-# Real-time monitoring
-pm2 monit
+npm update
+npm audit fix
+```
 
-# Web dashboard
-pm2 plus
+### 5. Monitor Logs
+
+```bash
+tail -f logs/vapor_$(date +%Y-%m-%d).log
 ```
 
 ---
@@ -416,87 +267,146 @@ pm2 plus
 ### Common Issues
 
 **"Invalid Password"**
-- Check password is correct
-- Check for special characters that might need escaping
+- Double-check credentials
+- Try logging in through Steam website first
+- Check for typos/special characters
 
 **"Rate Limited"**
-- Wait 30 minutes before trying again
-- Don't restart the app repeatedly
+- Wait 30 minutes before retrying
+- Reduce concurrent logins in settings
+- Increase startup delay
 
 **"Steam Guard Required"**
-- Add shared secret for automatic codes
-- Or enter code manually when prompted
+- Add shared secret for auto-codes
+- Use QR/app approval method
+- Or enter code manually
 
-**Menu looks broken**
-- Increase terminal width to at least 50 characters
-- Use a modern terminal (Windows Terminal, iTerm2, etc.)
+**UI Looks Broken**
+- Increase terminal width to 80+ columns
+- Use modern terminal (Windows Terminal, iTerm2)
+- Check terminal supports UTF-8
+
+**Memory Issues**
+- Reduce concurrent accounts
+- Check for memory leaks: `node --expose-gc src/accountHandler.js`
+- Monitor with Task Manager/htop
 
 ### Debug Mode
 
-Enable debug logging in Settings menu or:
-
-```json
-// config/settings.json
-{
-    "debug": true
-}
+Enable in Settings menu or:
+```bash
+# Set in .env
+DEBUG=true
+LOG_LEVEL=debug
 ```
 
 ---
 
-## 📝 Changelog
+## 📊 Statistics
 
-### v3.0.0
-- Complete rewrite with improved architecture
-- Fixed-width UI for better compatibility
-- PM2 support for production deployment
-- Invisible boosting mode
-- Improved password handling (64+ chars)
-- Live session sidebar
-- Better statistics tracking
-- Duplicate account prevention
-- Input validation throughout
+Track your boosting progress:
+- **Current session**: Uptime, active accounts, hours gained
+- **Lifetime**: Total sessions, total hours, total messages
+- **Per-account**: Individual time, games, status
 
-### v2.0.0
-- Multi-account support
-- 2FA support
-- Statistics dashboard
-- Message logging
-
-### v1.0.0
-- Initial release
->>>>>>> 894d41f (Updated V3 pre-release)
-
----
-
-## 📄 License
-
-<<<<<<< HEAD
-MIT License - See LICENSE file for details.
-
----
-
-**Made with ❤️ for the Steam community**
-=======
-MIT License - See [LICENSE](LICENSE) file for details.
-
----
-
-## ⚠️ Disclaimer
-
-This software is for educational purposes only. Using this tool may violate Steam's Terms of Service. Use at your own risk. The authors are not responsible for any consequences resulting from the use of this software.
+Statistics auto-save and persist across restarts.
 
 ---
 
 ## 🤝 Contributing
 
+Contributions welcome! Please:
+
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing`)
-5. Open a Pull Request
+2. Create feature branch (`git checkout -b feature/amazing`)
+3. Commit changes (`git commit -m 'Add feature'`)
+4. Push to branch (`git push origin feature/amazing`)
+5. Open Pull Request
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ---
 
-**Made with ❤️ for the Steam community**
->>>>>>> 894d41f (Updated V3 pre-release)
+## 📝 Development
+
+### Setup
+
+```bash
+npm install
+npm run dev  # Watch mode with auto-reload
+```
+
+### Scripts
+
+```bash
+npm test          # Run tests
+npm run lint      # Check code style
+npm run format    # Format code
+npm run validate  # Run all checks
+npm run backup    # Create backup
+```
+
+### Testing
+
+```bash
+npm test              # All tests
+npm run test:watch   # Watch mode
+npm run test:unit    # Unit tests only
+```
+
+---
+
+## 📄 License
+
+MIT License - See [LICENSE](LICENSE)
+
+**Additional Terms:**
+- Educational use only
+- No warranty provided
+- Use at own risk
+- May violate Steam ToS
+
+---
+
+## 🙏 Acknowledgments
+
+- [node-steam-user](https://github.com/DoctorMcKay/node-steam-user) - Steam client
+- [steam-totp](https://github.com/DoctorMcKay/node-steam-totp) - 2FA codes
+- [fork](https://github.com/valnssh/vaporbooster)
+- - All contributors and testers
+
+---
+
+## 📞 Support & Contact
+
+- **Issues**: [GitHub Issues](https://github.com/stolenact/VaporBooster/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/stolenact/VaporBooster/discussions)
+- **Email**: realzqpwi@gmail.com
+- **Author**: [stolenact](https://github.com/stolenact)
+
+---
+
+## 📈 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for version history.
+
+### v3.0.0 Highlights
+- ✅ All 6 critical bugs fixed
+- ✅ QR login fully working
+- ✅ Production-ready security
+- ✅ Complete UI overhaul
+- ✅ Comprehensive documentation
+
+---
+
+## ⭐ Star the Project
+
+If you find this useful, please star the repository!
+
+[![Star History Chart](https://api.star-history.com/svg?repos=stolenact/VaporBooster&type=Date)](https://star-history.com/#stolenact/VaporBooster&Date)
+
+---
+
+**Made by [stolenact](https://github.com/stolenact) with ❤️**
+
+*Remember: Use responsibly. You've been warned!*

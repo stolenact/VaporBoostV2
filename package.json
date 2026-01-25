@@ -1,50 +1,31 @@
 {
-<<<<<<< HEAD
-    "name": "vaporbooster",
-    "version": "3.0.0",
-    "description": "Advanced Steam Hour Booster with 2FA support, statistics, game database, and more.",
-    "main": "src/accountHandler.js",
-    "scripts": {
-        "start": "node src/accountHandler.js",
-        "dev": "node --watch src/accountHandler.js",
-        "setup": "node src/setup.js",
-        "stats": "node src/statsViewer.js",
-        "clean": "rm -rf accounts_data messages logs/*.log"
-    },
-    "keywords": [
-        "steam",
-        "booster",
-        "hours",
-        "gaming",
-        "automation"
-    ],
-    "license": "MIT",
-    "author": "VaporBooster",
-    "engines": {
-        "node": ">=16.0.0"
-    },
-    "dependencies": {
-        "easytimer.js": "^4.5.4",
-        "jwt-decode": "^3.1.2",
-        "readline-sync": "^1.4.10",
-        "steam-totp": "^2.1.2",
-        "steam-user": "^4.28.8"
-    },
-    "devDependencies": {}
-}
-=======
   "name": "vaporbooster",
   "version": "3.0.0",
-  "description": "Advanced Steam Hour Booster with 2FA, invisible mode, QR login, and PM2 support",
+  "description": "Advanced Steam Hour Booster - Secure, production-ready with encryption, rate limiting, and comprehensive monitoring",
   "main": "src/accountHandler.js",
   "scripts": {
     "start": "node src/accountHandler.js",
-    "dev": "node --watch src/accountHandler.js",
-    "pm2:start": "pm2 start ecosystem.config.js",
-    "pm2:stop": "pm2 stop vaporbooster",
-    "pm2:restart": "pm2 restart vaporbooster",
-    "pm2:logs": "pm2 logs vaporbooster",
-    "clean": "rm -rf accounts_data messages logs/*.log"
+    "dev": "NODE_ENV=development node --watch src/accountHandler.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --coverageReporters=text-lcov",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,json,md}\"",
+    "security:audit": "npm audit --audit-level=moderate",
+    "security:fix": "npm audit fix",
+    "backup": "node scripts/backup.js",
+    "restore": "node scripts/restore.js",
+    "clean": "node scripts/clean.js",
+    "clean:logs": "rm -rf logs/*.log",
+    "clean:data": "rm -rf accounts_data/*",
+    "setup": "node scripts/setup.js",
+    "validate": "npm run lint && npm run format:check && npm test",
+    "precommit": "npm run lint:fix && npm run format",
+    "prepare": "husky install"
   },
   "keywords": [
     "steam",
@@ -52,28 +33,69 @@
     "hours",
     "gaming",
     "idle",
-    "cards"
+    "automation",
+    "2fa",
+    "invisible-mode"
   ],
-  "author": "stolenact",
+  "author": "stolenact <realzqpwi@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stolenact/VaporBooster.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stolenact/VaporBooster/issues"
+  },
+  "homepage": "https://github.com/stolenact/VaporBooster#readme",
   "dependencies": {
     "easytimer.js": "^4.5.4",
     "readline-sync": "^1.4.10",
     "steam-totp": "^2.1.2",
-    "steam-user": "^5.0.0"
+    "steam-user": "^5.0.0",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "eslint": "^9.39.1"
+    "@types/node": "^20.10.0",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-security": "^1.7.1",
+    "prettier": "^3.1.0",
+    "jest": "^29.7.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stolenact/vaporbooster"
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "utils/**/*.js",
+      "!**/node_modules/**"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
   },
-  "bugs": {
-    "url": "https://github.com/stolenact/vaporbooster/issues"
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
   }
 }
->>>>>>> 894d41f (Updated V3 pre-release)

@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-# node
-node_modules/
-
-
-# local config
-config/*.local.json
-config/*.secret.json
-accounts_data/*.local.json
-accounts_data/*.secret.json
-
-
-# logs
-logs/
-
-
-# env
-.env
-.env.local
-
-
-# OS
-.DS_Store
-thumbs.db
-
-
-# VSCode
-.vscode/
-=======
 # Dependencies
 node_modules/
 
@@ -70,4 +41,3 @@ build/
 *.tgz
 *.bak
 *.tmp
->>>>>>> 894d41f (Updated V3 pre-release)
