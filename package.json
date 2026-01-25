@@ -1,7 +1,7 @@
 {
 <<<<<<< HEAD
     "name": "vaporbooster",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "description": "Advanced Steam Hour Booster with 2FA support, statistics, game database, and more.",
     "main": "src/accountHandler.js",
     "scripts": {
